@@ -5,6 +5,7 @@
     import words from './assets/Words.js';
     import laughingCat from './assets/laughing-cat.gif';
     import { getFarewellText } from '../Util.js';
+    import Languages from "./assets/Languages.js";
     export default function App() {
 
         function getRandomWord() {
@@ -151,7 +152,7 @@
             if (isGameLost) {
                return <>
                     <h2>Game Over</h2>
-                    <p>Game Over! You better start learning Assembly😭</p>
+                    <p>Game Over! You better start watching {Languages[Languages.length-1].name}☠️</p>
                    <p>The correct word was: '{currentWordObj.word.toUpperCase()}'</p>
                    <img
                        src={laughingCat}
@@ -173,8 +174,8 @@
             <>
                 <main>
                     <header>
-                        <h1>Assembly: Endgame</h1>
-                        <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
+                        <h1>Guess & Giggle</h1>
+                        <p>Guess the word within 8 attempts to survive the ultimate movie marathon! 🍿🎬</p>
                     </header>
 
                     <section className={gameStatusClass}>

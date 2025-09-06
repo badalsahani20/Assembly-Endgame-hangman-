@@ -206,12 +206,26 @@ span.chip.language-lost::before {
   top: 1rem;
   right: 1rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 4vw, 1.2rem); /* responsive font size */
   background: #f3f4f6;
-  padding: 0 4px 0 4px;
+  padding: 0 6px; /* slight increase for smaller screens */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   color: #213547;
+  z-index: 10; /* ensures it's above other elements */
+}
+
+@media (max-width: 480px) {
+  .score {
+    top: 0.3rem;
+    right: 0.5rem;
+    font-size: 10px;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding: 0 4px;
+    background-color: transparent;
+    color: #f3f4f6;
+  }
 }
 
 main {
